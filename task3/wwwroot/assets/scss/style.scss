@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    nav{
+        background-color: #CC0500;
+        position: relative;
+        .navLeft{
+            
+            .logo{
+                height: 100px;
+                display: flex;
+                justify-content: start;
+                .sign{
+                    p{
+                        font-family: 'Waterfall', cursive;
+    
+                    }
+                }
+            }
+            
+        }
+        .links{
+            div{
+                margin-right: 15px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+           
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .contact{
+                &:hover{
+                    .contact-sublinks{
+                        height: 150px;
+                        visibility: visible;
+                    }
+                }
+                
+                .contact-sublinks{
+
+                    visibility: hidden;
+                    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.38);
+                    overflow: hidden;
+                    height: 0%;
+                    transition: 0.45s;
+                    transition-timing-function:ease-in-out;
+                    background-color: #CC0500;
+                    ul{
+                        list-style: none;
+                        padding-left: 0%;
+                        margin: 0%;
+                        padding: 20px 0px;
+                        li{
+                            padding: 6px 25px;
+                        }
+                        
+                        a{
+                            i{
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                   
+                    position: absolute;
+                    top: 100px;
+                }
+            }
+           
+            a{
+                text-decoration: none;
+                font-size: 13px;
+                letter-spacing: 2px;
+                color: black;
+                opacity: 100%;
+                font-family: 'Heebo', sans-serif;
+                font-weight: lighter;
+                transition: 0.35s;
+                &:hover{
+                    color: white;
+                }
+                // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+        }
+
+        .search-card{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            span{
+                text-decoration: none;
+                font-size: 13px;
+                letter-spacing: 2px;
+                color: black;
+                opacity: 80%;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            .cardTotal{
+                span{
+                letter-spacing: 0px;
+                font-family: 'Heebo', sans-serif;
+                font-weight: lighter;
+                }
+            }
+            .basketIcon{
+                position: relative;
+                .cardCountDiv{
+                    position: absolute;
+                    background-color: rgb(33,37,41);
+                   width: 14px;
+                   height: 14px;
+                    border-radius: 50%;
+                    top: 0px;
+                    left: 10px;
+
+                    span{
+                        position: absolute;
+                        color: white;
+                        top: 0px;
+                        right: 2px;
+                        font-size: 10px;
+                        font-weight: bolder;
+                        
+                    }
+                }
+                
+              
+            }
+           i{
+               cursor: pointer;
+           }
+        }
+    }
+}
+
+main{
+    #introduce{
+        background-color: #ececec;
+        height: 240px;
+        display: flex;
+        align-items: center;
+        h1{
+            margin: 0px;
+            letter-spacing: 2px;
+            font-family: 'Waterfall', cursive;
+            font-size: 50px
+            ;
+        }
+        p{
+            letter-spacing: 2px;
+            font-family: 'Waterfall', cursive;
+            font-size: 15px
+            ;
+            margin: 0px;
+        }
+    }
+
+    #productList{
+        padding: 8% 0px;
+        .product{   
+                padding: 15px;
+           
+            text-align: center;
+            .image{
+                overflow: hidden;
+                
+                position: relative;
+                &:hover{
+                    .addToCard{
+                        opacity: 100%;
+                    }
+                    img{
+                        transform: scale(1.07);
+                        opacity: 40%;
+                    }
+                }
+                img{
+                    width: 100%;
+                    transition: 0.35s;
+                    transition-timing-function: ease-in-out;
+                }
+            }
+
+            .title{
+                h4{
+                    font-size: 16px;
+                    margin-top: 10px;
+                    letter-spacing: 2px;
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                }
+            }
+            .desc{
+                p{ 
+                    letter-spacing: 2px;
+                    opacity: 80%;
+                    margin: 0;
+                    margin-top: 10px;
+                    font-size: 12px;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
+            }
+
+            .price{
+                p{
+                    margin: 0;
+                    letter-spacing: 1px;
+                    font-size: 14px;
+                    margin-top: 10px;
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                }
+            }
+
+            .addToCard{
+                position: absolute;
+                top: 50%;
+                left: 25%;
+                opacity: 0%;
+                transition: 0.34s;
+                &:hover{
+                  span{
+                    background-color: black;
+                   
+                    color: white;
+                  }
+                  &{
+                      transform: scale(1.1);
+                  }
+                }
+                span{
+                    background-color: red;
+                    padding: 15px 25px;
+                    cursor: pointer;
+                    letter-spacing: 1px;
+                    font-size: 14px;
+                    transition: 0.35s; 
+                    transition-timing-function: ease-in-out;
+                    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.38);
+                    
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                }
+            }
+        }
+    }
+}

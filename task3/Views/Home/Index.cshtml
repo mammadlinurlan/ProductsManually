@@ -1,0 +1,50 @@
+﻿    @using task3.Models
+    @model List<Product>
+
+
+
+    <section id="introduce">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1>
+                        Product list
+                    </h1>
+                    <p> <img style="opacity:100% !important" src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/h1-custom-icon.png" alt=""> where cases are our inspiration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="productList">
+        <div class="container">
+            <div class="row">
+              
+
+                @foreach (Product item in Model)
+                {
+                    <div class="col-lg-3 product">
+                        <div class="image">
+                            <img src="~/assets/images/@item.ImageSrc" alt="">
+                            <div class="addToCard">
+                                <span>SƏBƏTƏ AT</span>
+                            </div>
+                        </div>
+                        <div class="title">
+                            <h4>@item.Title</h4>
+                        </div>
+                        <div class="desc">
+                            <p>@item.Desc</p>
+                        </div>
+                        <div class="price">
+                            <p>@item.Price</p>
+                        </div>
+
+                    </div>
+                }
+
+
+
+
+            </div>
+        </div>
+    </section>
