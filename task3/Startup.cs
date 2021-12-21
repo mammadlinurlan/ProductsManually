@@ -22,7 +22,7 @@ namespace task3
 
             services.AddDbContext<AppDbContext>(option =>
             {
-                option.UseSqlServer("Server=testbase; Database=NMeBusiness;Trusted_Connection=true");
+                option.UseSqlServer(@"Data Source=localhost;Initial Catalog=NMeBusiness;Integrated Security=false;User=sa;Password=nurlan123");
 
             });
         }
